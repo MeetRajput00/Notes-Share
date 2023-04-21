@@ -1,0 +1,8 @@
+background: linear-gradient(to right bottom, #fbdb89, #f48982);
+.container background: 
+  background-color: #f2efee;
+.btn--form{
+background-color: #f48982;
+  color: #fdf2e9;
+}
+color for links-#6F8AB7

@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+  display: flex;
+}
+
+.container {
+  width: 400px;
+  margin: auto;
+  padding: 36px 48px 48px 48px;
+  background-color: #f2efee;
+
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
+.login-title {
+  padding: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 9px;
+  border: none;
+}
+.login-form select{
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 9px;
+  border: none;
+}
+.login-form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(253, 242, 233, 0.5);
+}
+select option {
+  /* Style the <option> elements */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+select::after {
+  /* Style the dropdown arrow */
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+}
+
+select:focus, select:hover {
+  /* Style the <select> element when it's focused or hovered */
+  outline: none;
+  border-color: #999;
+}
+
+select:focus::after, select:hover::after {
+  /* Style the dropdown arrow when the <select> element is focused or hovered */
+  color: #333;
+}
+
+select:focus option, select:hover option {
+  /* Style the <option> elements when the <select> element is focused or hovered */
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+select:active, select:focus, select:hover {
+  /* Style the <select> element when it's active or focused */
+  outline: none;
+  border-color: #999;
+}
+
+select:active::after, select:focus::after, select:hover::after {
+  /* Style the dropdown arrow when the <select> element is active, focused or hovered */
+  color: #333;
+}
+
+select:disabled, select[disabled] {
+  /* Style the <select> element when it's disabled */
+  opacity: .6;
+  pointer-events: none;
+}
+.login-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(253, 242, 233, 0.5);
+}
+
+.btn--form {
+  background-color: #f48982;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 8px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 9px;
+  border: none;
+
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+button {
+  outline: 1px solid #f48982;
+}
+
+.btn--form:hover {
+  background-color: #fdf2e9;
+  color: #f48982;
+}
+.register-container{
+  display: flex;
+  
+  flex-direction: row-reverse;
+}
+.register-btn {
+  color: #6F8AB7;
+  cursor: pointer;
+}
+.register-btn:hover{
+  color: #37588d;
+}
