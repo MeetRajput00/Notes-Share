@@ -1,0 +1,43 @@
+CREATE TABLE [Student] (
+	Id integer(5) NOT NULL,
+	Email varchar(50) NOT NULL UNIQUE,
+	Password varchar(50) NOT NULL,
+  CONSTRAINT [PK_STUDENT] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [Teacher] (
+	Id integer(5) NOT NULL,
+	Email varchar(50) NOT NULL UNIQUE,
+	Password varchar(50) NOT NULL,
+	Name varchar(50) NOT NULL,
+  CONSTRAINT [PK_TEACHER] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [Notes] (
+	Id integer(5) NOT NULL,
+	Title varchar(50) NOT NULL UNIQUE,
+	TeacherId varchar(50) NOT NULL,
+	UploadedBy varchar(50) NOT NULL,
+  CONSTRAINT [PK_NOTES] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+
+
+ALTER TABLE [Notes] WITH CHECK ADD CONSTRAINT [Notes_fk0] FOREIGN KEY ([TeacherId]) REFERENCES [Teacher]([Id])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [Notes] CHECK CONSTRAINT [Notes_fk0]
+GO
+
