@@ -167,3 +167,6 @@ button {
   color: #6F8AB7;
   cursor: pointer;
 }
+.register-btn:hover{
+  color: #37588d;
+}
