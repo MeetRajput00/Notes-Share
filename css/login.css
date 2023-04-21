@@ -158,3 +158,12 @@ button {
   background-color: #fdf2e9;
   color: #f48982;
 }
+.register-container{
+  display: flex;
+  
+  flex-direction: row-reverse;
+}
+.register-btn {
+  color: #6F8AB7;
+  cursor: pointer;
+}

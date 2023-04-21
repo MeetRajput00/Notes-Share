@@ -1,5 +1,5 @@
 CREATE TABLE [Student] (
-	Id integer(5) NOT NULL,
+	Id INT NOT NULL,
 	Email varchar(50) NOT NULL UNIQUE,
 	Password varchar(50) NOT NULL,
   CONSTRAINT [PK_STUDENT] PRIMARY KEY CLUSTERED
@@ -10,7 +10,7 @@ CREATE TABLE [Student] (
 )
 GO
 CREATE TABLE [Teacher] (
-	Id integer(5) NOT NULL,
+	Id INT NOT NULL,
 	Email varchar(50) NOT NULL UNIQUE,
 	Password varchar(50) NOT NULL,
 	Name varchar(50) NOT NULL,
@@ -22,9 +22,9 @@ CREATE TABLE [Teacher] (
 )
 GO
 CREATE TABLE [Notes] (
-	Id integer(5) NOT NULL,
+	Id INT NOT NULL,
 	Title varchar(50) NOT NULL UNIQUE,
-	TeacherId varchar(50) NOT NULL,
+	TeacherId INT NOT NULL,
 	UploadedBy varchar(50) NOT NULL,
   CONSTRAINT [PK_NOTES] PRIMARY KEY CLUSTERED
   (
@@ -41,3 +41,4 @@ GO
 ALTER TABLE [Notes] CHECK CONSTRAINT [Notes_fk0]
 GO
 
+SELECT * FROM NOTES;
