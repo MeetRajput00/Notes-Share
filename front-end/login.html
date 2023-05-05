@@ -5,12 +5,13 @@
       <title> Login Form </title>
       <link rel="stylesheet" href="css/login.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="script.js"></script>
    </head>
    <body>
       <div class="container">
          <h2 class="login-title">Log in</h2>
      
-         <form class="login-form">
+         <form class="login-form" action="login" method="post">
            <div>
              <label for="name">Role </label>
              <select id="role" name="Roles">
@@ -20,12 +21,12 @@
            </div>
      
            <div>
-             <label for="email">Email </label>
+             <label for="username">Username </label>
              <input
-                    id="email"
-                    type="email"
-                    placeholder="me@example.com"
-                    name="email"
+                    id="username"
+                    type="text"
+                    placeholder="user111"
+                    name="username"
                     required
                     />
            </div>

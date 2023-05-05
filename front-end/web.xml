@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <!-- Define the login configuration -->
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login.html</form-login-page>
+      <form-error-page>/login.html?error=true</form-error-page>
+    </form-login-config>
+  </login-config>
+
+  <!-- Define the security constraints -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Restricted Area</web-resource-name>
+      <url-pattern>/restricted/*</url-pattern>
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>teacher</role-name>
+      <role-name>student</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Define the security roles -->
+  <security-role>
+    <role-name>teacher</role-name>
+  </security-role>
+  <security-role>
+    <role-name>student</role-name>
+  </security-role>
+
+</web-app>
